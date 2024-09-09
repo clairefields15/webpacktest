@@ -4,6 +4,110 @@ const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Dotenv = require("dotenv-webpack");
+const { webpack: PigmentPlugin } = require("@pigment-css/unplugin");
+const { createTheme } = require("@mui/material");
+
+const AccentBlue = "#005373";
+const AccentOrange = "#fc601f";
+const Gray = "#d2d6d8";
+const White = "#ffffff";
+
+const theme = createTheme({
+    cssVariables: true,
+    palette: {
+        primary: {
+            main: AccentOrange,
+            light: White,
+        },
+        secondary: {
+            main: AccentBlue,
+        },
+        background: {
+            default: Gray,
+        },
+    },
+    typography: {
+        fontSize: 12,
+        fontFamily: ["Open sans", "Verdana", "Sans Serif"].join(","),
+        allVariants: {
+            fontSize: 12,
+            fontFamily: ["Open sans", "Verdana", "Sans Serif"].join(","),
+        },
+    },
+    zIndex: {
+        drawer: 920000,
+        modal: 930000,
+        snackbar: 940000,
+        tooltip: 950000,
+    },
+    components: {
+        MuiAutocomplete: {
+            styleOverrides: {
+                listbox: {
+                    '.MuiAutocomplete-option[aria-selected="false"].Mui-focused':
+                        {
+                            backgroundColor: Gray,
+                        },
+                    '.MuiAutocomplete-option[aria-selected="false"].Mui-focusVisible':
+                        {
+                            backgroundColor: Gray,
+                        },
+                    '.MuiAutocomplete-option[aria-selected="false"].Mui-focused.Mui-focusVisible':
+                        {
+                            backgroundColor: Gray,
+                        },
+                },
+            },
+        },
+        MuiChip: {
+            styleOverrides: {
+                colorPrimary: {
+                    "&.Mui-disabled": {
+                        color: "#000000",
+                        backgroundColor: Gray,
+                        opacity: 0.8,
+                    },
+                },
+                colorSecondary: {
+                    color: "#FFFFFF",
+                    backgroundColor: AccentBlue,
+                },
+            },
+        },
+        MuiCircularProgress: {
+            styleOverrides: {
+                circle: {
+                    color: "grey",
+                },
+            },
+        },
+        MuiTypography: {
+            styleOverrides: {
+                root: {
+                    fontFamily: ["Open sans", "Verdana", "Sans Serif"].join(
+                        ","
+                    ),
+                },
+            },
+        },
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    fontFamily: ["Open sans", "Verdana", "Sans Serif"].join(
+                        ","
+                    ),
+                },
+            },
+        },
+        MuiToggleButton: {
+            styleOverrides: {
+                root: {
+                    padding: "0px 7px",
+                },
+            },
+        },
+    },
+});
 
 // App directory
 const appDirectory = fs.realpathSync(process.cwd());
@@ -124,6 +228,10 @@ module.exports = ({ mode, env }) => {
             }),
             new Dotenv({
                 path: `./.env.${getEnv()}`,
+            }),
+            PigmentPlugin({
+                theme,
+                transformLibraries: ["@mui/material"],
             }),
         ].concat(isModeProduction ? [new MiniCssExtractPlugin()] : []),
         optimization: {

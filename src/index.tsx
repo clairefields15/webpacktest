@@ -1,9 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
-
-const App = () => <h1>Hello, React with TypeScript!</h1>;
-
 import { createRoot } from "react-dom/client";
+import { App } from "./App";
 
 const domNode = document.getElementById("root");
 if (domNode) {
