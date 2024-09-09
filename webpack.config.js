@@ -13,7 +13,7 @@ const resolveAppPath = (relativePath) =>
     path.resolve(appDirectory, relativePath);
 
 // Host
-const host = process.env.HOST || "local.edelweiss.plus";
+const host = process.env.HOST || "localhost";
 
 const sassLoader = {
     loader: "sass-loader",
@@ -43,7 +43,7 @@ module.exports = ({ mode, env }) => {
         mode,
         entry: "./src/index.tsx",
         output: {
-            library: "EdelweissComponents",
+            library: "Components",
             path: path.resolve(__dirname, "build"),
             filename: getOutputFileName(),
         },
@@ -66,7 +66,7 @@ module.exports = ({ mode, env }) => {
             host,
             server: "https",
             port: 3000,
-            allowedHosts: ["localhost:9999", "local.edelweiss.plus"],
+            allowedHosts: ["localhost:9999"],
             headers: {
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Credentials": "true",
