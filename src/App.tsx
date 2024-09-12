@@ -1,5 +1,6 @@
 import { PartyMode } from "@mui/icons-material";
 import { Button, Divider, IconButton } from "@mui/material";
+import CloseModalButton from "./CloseModalButton";
 
 export const App = () => (
     <div>
@@ -10,5 +11,6 @@ export const App = () => (
         <IconButton>
             <PartyMode />
         </IconButton>
+        <CloseModalButton onClick={() => alert("close")} />
     </div>
 );
