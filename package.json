@@ -1,40 +1,50 @@
 {
-    "scripts": {
-        "start": "webpack serve --env mode=development env=development",
-        "build": "webpack --mode production"
-    },
-    "devDependencies": {
-        "@pigment-css/unplugin": "^0.0.22",
-        "@types/react": "^18.2.21",
-        "@types/react-dom": "^18.2.7",
-        "cross-env": "^7.0.3",
-        "css-loader": "^6.8.1",
-        "dotenv-webpack": "^8.0.1",
-        "esbuild": "^0.21.4",
-        "fs-extra": "^11.1.1",
-        "html-webpack-plugin": "^5.5.3",
-        "hygen": "^6.2.11",
-        "local-web-server": "^5.2.0",
-        "mini-css-extract-plugin": "^2.7.6",
-        "sass": "^1.70.0",
-        "sass-loader": "^14.1.0",
-        "style-loader": "^3.3.3",
-        "terser-webpack-plugin": "^5.3.9",
-        "ts-loader": "^9.5.1",
-        "typescript-plugin-css-modules": "^4.1.1",
-        "webpack": "^5.91.0",
-        "webpack-cli": "^5.1.4",
-        "webpack-dev-server": "^4.15.1"
-    },
-    "dependencies": {
-        "@emotion/react": "^11.10.5",
-        "@emotion/styled": "^11.10.5",
-        "@mui/icons-material": "^5.15.14",
-        "@mui/material": "^5.15.14",
-        "@mui/utils": "^5.15.14",
-        "@pigment-css/react": "^0.0.22",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-error-boundary": "^3.1.4"
-    }
+	"scripts": {
+		"start": "webpack serve --env mode=development env=development",
+		"build": "webpack --mode production",
+		"clean": "rimraf --glob node_modules"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.25.4",
+		"@babel/preset-react": "^7.24.7",
+		"@babel/preset-typescript": "^7.24.7",
+		"@pigment-css/unplugin": "^0.0.22",
+		"@types/react": "^18.2.21",
+		"@types/react-dom": "^18.2.7",
+		"cross-env": "^7.0.3",
+		"css-loader": "^6.8.1",
+		"dotenv-webpack": "^8.0.1",
+		"esbuild": "^0.21.4",
+		"fs-extra": "^11.1.1",
+		"html-webpack-plugin": "^5.5.3",
+		"hygen": "^6.2.11",
+		"local-web-server": "^5.2.0",
+		"mini-css-extract-plugin": "^2.7.6",
+		"sass": "^1.70.0",
+		"sass-loader": "^14.1.0",
+		"style-loader": "^3.3.3",
+		"terser-webpack-plugin": "^5.3.9",
+		"ts-loader": "^9.5.1",
+		"typescript-plugin-css-modules": "^4.1.1",
+		"webpack": "^5.91.0",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^4.15.1"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.10.5",
+		"@emotion/styled": "^11.10.5",
+		"@mui/icons-material": "^6.1.0",
+		"@mui/material": "^6.1.0",
+		"@mui/material-pigment-css": "^6.1.0",
+		"@mui/utils": "^5.15.14",
+		"@mui/x-date-pickers": "^7.16.0",
+		"@pigment-css/react": "^0.0.22",
+		"dayjs": "^1.11.13",
+		"prettier": "^3.3.3",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-error-boundary": "^3.1.4",
+		"react-hook-form": "^7.53.0",
+		"rimraf": "^6.0.1"
+	}
 }
