@@ -49,7 +49,7 @@ export default function AccessibleModal({
 			sx={{
 				zIndex,
 			}}
-			className="modal-root EdelweissComponentRoot"
+			className="modal-root"
 			open={modal.state.isOpen}
 			onClose={handleClose}
 			aria-labelledby="modal-title"
