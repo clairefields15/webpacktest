@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTheme } from '@mui/material-pigment-css';
-import { Box, Modal, SxProps, Theme } from '@mui/material';
+import { Modal, SxProps, Theme } from '@mui/material';
+import Box from '@mui/material-pigment-css/Box';
 import CloseModalButton from './CloseModalButton';
 import { UseDialogType } from '../hooks/useDialog.hook';
 
