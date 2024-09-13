@@ -11,14 +11,15 @@ export default function GridComponent() {
 	//     Type '{ xs: number; item: true; direction: "row"; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & DetailsHTMLAttributes<HTMLDivElement>'.
 	//       Property 'xs' does not exist on type 'IntrinsicAttributes & GridBaseProps & DetailsHTMLAttributes<HTMLDivElement>'.
 	return (
-		<Grid container spacing={0}>
-			<Grid xs={7} item direction="row">
-				<InputLabel>Email Addresses</InputLabel>
-			</Grid>
-			<Grid xs={4} item direction="row">
-				<InputLabel>Market</InputLabel>
-			</Grid>
-			<Grid xs={1} item direction="row"></Grid>
-		</Grid>
+		<></>
+		// <Grid container spacing={0}>
+		// 	<Grid xs={7} item direction="row">
+		// 		<InputLabel>Email Addresses</InputLabel>
+		// 	</Grid>
+		// 	<Grid xs={4} item direction="row">
+		// 		<InputLabel>Market</InputLabel>
+		// 	</Grid>
+		// 	<Grid xs={1} item direction="row"></Grid>
+		// </Grid>
 	);
 }
