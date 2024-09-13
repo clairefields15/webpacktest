@@ -6,6 +6,7 @@ import VisuallyHidden from './VisuallyHidden';
 import VisuallyHiddenAsDiv from './VisuallyHiddenAsDiv';
 import AccessibleModal from './AccessibleModal';
 import useDialog from '../hooks/useDialog.hook';
+import { FormExample } from './FormExample';
 
 export const App = () => {
 	const dialog = useDialog();
@@ -27,6 +28,7 @@ export const App = () => {
 			<AccessibleModal modal={dialog} header="Modal header">
 				<div>Modal Child content</div>
 			</AccessibleModal>
+			<FormExample />
 		</div>
 	);
 };
