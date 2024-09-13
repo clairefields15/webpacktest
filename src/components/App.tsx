@@ -23,10 +23,10 @@ export const App = () => {
 			{/* <GridComponent /> */}
 			<VisuallyHidden />
 			<VisuallyHiddenAsDiv />
-			{/* <Button onClick={() => dialog.open()}>Open Modal</Button>
+			<Button onClick={() => dialog.open()}>Open Modal</Button>
 			<AccessibleModal modal={dialog} header="Modal header">
 				<div>Modal Child content</div>
-			</AccessibleModal> */}
+			</AccessibleModal>
 		</div>
 	);
 };
